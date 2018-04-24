@@ -3,6 +3,12 @@ import logo from './logo.svg';
 import './App.css';
 import User from './User';
 
+import 'jquery'
+import 'popper.js'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap'
+
 class App extends Component {
   render() {
     return (
