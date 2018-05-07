@@ -6,10 +6,11 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import { Provider } from 'react-redux';
 import reducerApp from './reducerApp';
-
+import {reducer} from 'redux-form'
 const store = createStore(
     combineReducers({
         usuario: reducerApp,
+        form:reducer
     }),
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )

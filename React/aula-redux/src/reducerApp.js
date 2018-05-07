@@ -1,7 +1,8 @@
 import {TROCA_NOME} from './actionsApp';
 
 const DEFAULT_STATE = {
-    nome: 'Mathias'
+    nome: 'Mathias',
+   
 }
 export default (state = DEFAULT_STATE, {type, payload}) => {
     switch (type) {
