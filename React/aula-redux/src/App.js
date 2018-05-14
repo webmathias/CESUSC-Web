@@ -1,25 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+
+import 'jquery'
+import 'popper.js'
+
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap'
+
+
 import { connect } from 'react-redux'
 import { TROCA_NOME, trocanome } from './actionsApp'
-import FormExample from './FormExameple'
+import WizardController from './WizardController'
 const App = (props) => {
   const { nomeDoUsuario, trocanome } = props;
   return (
     <div className="App">
-      <FormExample
+      <WizardController
         onSubmit={values => {
           console.log(values)
         }
         } />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-title">Welcome to React</h1>
-      </header>
-      <p onClick={() => trocanome(nomeDoUsuario)} className="App-intro">
-        {nomeDoUsuario}
-      </p>
     </div>
   );
 }
