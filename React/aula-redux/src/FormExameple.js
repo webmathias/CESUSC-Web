@@ -38,7 +38,7 @@ const FormExample = (props) => {
             <Field name="firstName"
                 label="Primeiro Nome"
                 component={customField} />
-            <Field type='password' name="lastName"
+            <Field type='text' name="lastName"
                 label="Sobrenome"
                 component={customField} />
             <FieldArray name='sevices'
