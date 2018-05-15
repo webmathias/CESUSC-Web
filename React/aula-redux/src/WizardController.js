@@ -25,22 +25,27 @@ class WizardController extends Component {
     const { page } = this.state;
     return (
       <div>
-        {page === 1 && <FirstStep onSubmit={this.nextPage} />}
+        {page === 1 && <FirstStep showButton={true} onSubmit={this.nextPage} />}
         {page === 2 &&
           <SecondStep
             previousPage={this.previousPage}
             onSubmit={this.nextPage}
+            showButton={true}
           />}
         {page === 3 &&
           <ThirdStep
             previousPage={this.previousPage}
-            onSubmit={onSubmit}
-          />}
-          {page > 4 && 
-          <FinishStep
-          previousPage={this.previousPage}
-          onSubmit={onSubmit} />
-          }
+            review={this.nextPage}
+            showButton={true}
+          />
+        }
+        {page === 4 && 
+        <div>
+          <FirstStep showButton={false}/>
+          <SecondStep showButton={false} />
+          <ThirdStep showButton={false}  onSubmit={onSubmit} />
+          </div>
+        }
       </div>
     );
   }

@@ -19,6 +19,8 @@ const App = (props) => {
       <WizardController
         onSubmit={values => {
           console.log(values)
+        
+        alert(JSON.stringify(values))
         }
         } />
     </div>

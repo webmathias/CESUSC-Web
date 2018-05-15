@@ -4,7 +4,8 @@ import CustomField from './Field.js'
 
 
 const SecondStep = props => {
-  const { handleSubmit, previousPage } = props;
+  const { handleSubmit, previousPage,showButton } = props;
+  console.log(showButton)
   return (
     <div>
       <h2> Endereço </h2>
@@ -28,8 +29,8 @@ const SecondStep = props => {
         label="Cidade"
       />
       <div>
-      <button className="btn btn-primary" type="button" onClick={previousPage}> Previous </button>
-        <button className="btn btn-primary" type="submit" >Step 3</button>
+      <button className="btn btn-primary" type="button" hidden={!showButton} onClick={previousPage}> Previous </button>
+        <button className="btn btn-primary" type="submit" hidden={!showButton} >Step 3</button>
       </div>
     </form>
     </div>

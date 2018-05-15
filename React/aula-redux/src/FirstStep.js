@@ -18,7 +18,8 @@ const validate = (values) => {
 
 
 const FirstStep = props => {
-  const { handleSubmit } = props;
+  const { handleSubmit,showButton } = props;
+  console.log(showButton)
   return (
     <div>
       <h2> Informações pessoais </h2>
@@ -43,7 +44,8 @@ const FirstStep = props => {
         label="Phone Number"
       />
       <div>
-        <button className="btn btn-primary" type="submit" >Step 2</button>
+       
+        <button className="btn btn-primary" type="submit" hidden={!showButton} >Step 2</button>
       </div>
       </div>
     </form>
